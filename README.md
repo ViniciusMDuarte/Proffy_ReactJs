@@ -4,5 +4,5 @@
 </h1>
 
 <h2 align="center"> 
-    <img src="/github/screenshot.png" alt="Screenshot - Proffy" > 
+    <img src="web/github/screenshot.png" alt="Screenshot - Proffy" > 
 </h2>
