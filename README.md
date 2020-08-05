@@ -1,8 +1,8 @@
 
 <h1 align="center"> 
-    Projeto Proffy em andamento, atualização diária !! 
+    Projeto criado na #nlw2, nome do Projeto #Proffy  !! 
 </h1>
 
 <h2 align="center"> 
-    <img src="/github/screenshot.png" alt="Screenshot - Proffy" > 
+    <img src="web/github/screenshot.png" alt="Screenshot - Proffy" > 
 </h2>
