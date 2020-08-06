@@ -1,4 +1,4 @@
-import { Request, Response} from 'express'
+import { Request, Response, response} from 'express'
 
 import db from '../database/connection';
 
@@ -94,12 +94,12 @@ export default class ClassesController {
         
             await trx.commit();
         
-            return res.status(201).send();
+            return response.status(201).send();
     
         } catch(err) {
             await trx.rollback();
     
-            return res.status(400).json({
+            return response.status(400).json({
                 error: 'Unexpextec error while creating new class'
             })
         }

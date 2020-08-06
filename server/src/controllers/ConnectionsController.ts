@@ -9,8 +9,10 @@ export default class ConnectionsController {
     async create(request: Request, response: Response) {
      const { user_id } = request.body;
 
-    await db('conections').insert({
+    await db('connections').insert({
         user_id,
     });
+
+    return response.status(201).send();
 }
 }
