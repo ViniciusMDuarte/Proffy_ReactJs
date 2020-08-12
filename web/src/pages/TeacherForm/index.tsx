@@ -27,9 +27,10 @@ function TeacherForm() {
                 </fieldset>
                 <fieldset>
                     <legend>Sobre a aula</legend>
-                       <Select name="subject" 
-                       label="Matéria"
-                       options= {[
+                       <Select 
+                        name="subject" 
+                        label="Matéria"
+                        options= {[
                            {value: 'Artes', label:'Artes' },
                            {value: 'Biologia', label:'Biologia' },
                            {value: 'Ciências', label:'Ciências' },
@@ -43,6 +44,13 @@ function TeacherForm() {
                        
                        />
                        <Input name="cost" label="Custo da sua hora por aula" />
+                </fieldset>
+                <fieldset>
+                    <legend>Horários disponíveis
+                    <button type="button">
+                        + Novo horário
+                    </button>
+                    </legend>
                 </fieldset>
                
                 <footer>
