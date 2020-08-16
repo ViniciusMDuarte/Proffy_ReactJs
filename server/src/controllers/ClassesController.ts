@@ -47,7 +47,7 @@ export default class ClassesController {
     return response.json(classes)
     }
 
-    async create(req: Request, res: Response) {
+    async create(request: Request, response: Response) {
         const {
             name,
             avatar,
@@ -56,7 +56,7 @@ export default class ClassesController {
             subject,
             cost,
             schedule
-        } = req.body;
+        } = request.body;
     
         const trx = await db.transaction();
     

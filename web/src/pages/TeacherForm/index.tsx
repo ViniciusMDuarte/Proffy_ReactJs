@@ -11,7 +11,7 @@ import './styles.css';
 
 function TeacherForm() {
     const [scheduleItems, setScheduleItems] = useState([
-        { week_day: 0, from:'', to:'' }
+        { week_day: '', from:'', to:'' }
     ]);
 
 
@@ -19,7 +19,7 @@ function TeacherForm() {
 
         setScheduleItems([
             ...scheduleItems,
-            { week_day: 0, from:'', to:'' }
+            { week_day: '', from:'', to:'' }
         ]);
     }
 
@@ -37,11 +37,10 @@ function TeacherForm() {
                        <Input name="avatar" label="Avatar" />
                        <Input name="whatsapp" label="Whatsapp" />
                        <Textarea name="bio" label="Biografia" />
-                       
                 </fieldset>
                 <fieldset>
                     <legend>Sobre a aula</legend>
-                       <Select 
+                       <Select
                         name="subject" 
                         label="Matéria"
                         options= {[
@@ -60,6 +59,7 @@ function TeacherForm() {
                        <Input name="cost" label="Custo da sua hora por aula" />
 
                 </fieldset>
+                
                 <fieldset>
                     <legend>Horários disponíveis
                         <button type="button" onClick={addNewScheduleItem}>
@@ -83,8 +83,8 @@ function TeacherForm() {
                                 { value: '6', label: 'Sábado' },
                             ]}
                         />
-                    <Input name="from" label="Das" type="time" />
-                    <Input name="to" label="Até" type="time" />
+                        <Input name="from" label="Das" type="time" />
+                        <Input name="to" label="Até" type="time" />
 
                     </div>
                         )
