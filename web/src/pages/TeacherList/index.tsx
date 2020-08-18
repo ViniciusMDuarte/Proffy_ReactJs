@@ -1,12 +1,13 @@
 import React, { useState, FormEvent } from 'react';
-import PageHeader from '../../components/PageHeader';
-import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 import api from '../../services/api';
+import PageHeader from '../../components/PageHeader';
+import TeacherItem, { Teacher} from '../../components/TeacherItem';
 
 
 import './styles.css';
+
 
 function TeacherList() {
     const [teachers, setTeachers] = useState([]);
@@ -27,6 +28,7 @@ function TeacherList() {
             }
         });
        setTeachers(response.data)
+   
     }
 
     return (
@@ -80,31 +82,9 @@ function TeacherList() {
            </PageHeader>
 
            <main>
-               <article className="teacher-item">
-                   <header>
-                       <img src="https://avatars0.githubusercontent.com/u/42785005?s=460&u=d4c1baff061120736cc077c443130e0eacacb0dc&v=4" alt="Vinicius Duarte"/>
-                        <div>
-                            <strong>Vinicius Duarte</strong>
-                            <span>Front end</span>
-                        </div> 
-                    </header>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            <br/> <br/>
-                            Deserunt recusandae, non, voluptas, ab perspiciatis itaque corporis amet quis ipsam dolore dolores hic enim accusamus error incidunt veniam? Saepe, eligendi impedit.
-                        </p>
-                        <footer>
-                            <p>
-                                Preço/hora
-                                <strong>R$ 300,00</strong>   
-                            </p>
-                        
-                            <button type="button">
-                                <img src={whatsappIcon} alt="Whatsapp"/>
-                                Entrar em contato
-                            </button>
-                        </footer>
-                </article>
+            { teachers.map((teacher: Teacher) => {
+                return <TeacherItem key={teacher.id} teacher= {teacher} />
+            })};
             </main>
 
         </div>
