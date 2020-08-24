@@ -11,6 +11,18 @@ const styles = StyleSheet.create({
 
     banner: {
         width:'100%',
+        resizeMode: 'contain',
+    },
+
+    title: {
+        fontSize: 20,
+        color: '#fff',
+        lineHeight: 30,
+        marginTop: 80,
+    },
+
+    titleBold: {
+        fontWeight: 'bold',
     }
 });
 
