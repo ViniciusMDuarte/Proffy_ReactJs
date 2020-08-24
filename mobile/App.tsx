@@ -1,25 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Landing from './src/pages/Landing';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-        <Text style={styles.text}>Hello NLW!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <Landing />
+      <StatusBar style="light" />
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#333',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize: 50,
-    color: '#fff',
-  }
-});
