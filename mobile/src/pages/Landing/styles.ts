@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Poppins_400Regular',
         color:'#d4c2ff',
         fontSize: 12,
-        maxWidth: 140,
+        maxWidth: 160,
         marginTop: 40,
         lineHeight: 20,
     }
