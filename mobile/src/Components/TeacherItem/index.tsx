@@ -9,33 +9,42 @@ import whattsappIcon from '../../assets/images/icons/whatsapp.png'
 import styles from './styles';
 import { RectButton } from 'react-native-gesture-handler';
 
+export interface Teacher {
+    avatar: string;
+    bio: string;
+    cost: number;
+    id: number;
+    name: string;
+    subject: string;
+    whatsapp: string;
+}
 
-function TeacherItem() {
+interface TeacherItemProps {
+    teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
     return (
         <View style={styles.container}>
             <View style={styles.profile}>
                 <Image
                     style={styles.avatar}
-                    source={{ uri:'https://github.com/ViniciusMDuarte.png' }}
+                    source={{ uri: teacher.avatar}}
                 />
 
                 <View style={styles.profileInfo}>
-                    < Text style={styles.name}>Vinicius Duarte</Text>
-                    < Text style={styles.subject}>Mobile</Text>
+                    < Text style={styles.name}>{teacher.name}</Text>
+                    < Text style={styles.subject}>{teacher.subject}</Text>
                 </View> 
 
             </View>
 
-            <Text style={styles.bio}>
-                    Programador Mobile Senior, 12 anos de experiência em apps.
-                    {'\n'} {'\n'}
-                    Apaixonado por ensinar jovens a alavançar a carreira no mundo mobile.
-            </Text>
+            <Text style={styles.bio}>{teacher.bio} </Text>
 
             <View style={styles.footer}>
                 <Text style={styles.price}>
                     Preço/hora {'   '}
-                    <Text style={styles.priceValue}>R$ 20,00</Text>
+                    <Text style={styles.priceValue}>{teacher.cost}</Text>
                 </Text>
 
                 <View style={styles.buttonsContainer}>
